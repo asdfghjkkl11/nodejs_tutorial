@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Everland</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/stylesheets/main.css" />
+		<noscript><link rel="stylesheet" href="/static/stylesheets/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Sidebar -->
+		<section id="sidebar">
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="#intro">Welcome</a></li>
+						<li><a href="#one">About</a></li>
+						<li><a href="#two">Find route</a></li>
+						<li><a href="#three">Get in touch</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Intro -->
+			<section id="intro" class="wrapper style1 fullscreen fade-up">
+				<div class="inner">
+					<h1>Everland</h1>
+					<p>환상의 나라 에버랜드로~~ </p>
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">Learn more</a></li>
+					</ul>
+				</div>
+			</section>
+			<!-- One -->
+			<section id="one" class="wrapper style2 spotlights">
+				<section>
+					<a href="#" class="image"><img src="/static/images/f2.png" alt="" data-position="center center" /></a>
+					<div class="content">
+						<div class="inner">
+							<h2>With Priority</h2>
+							<p>Help you to find adequate route while enjoying in everland. I hope you will have a good time in everland.</p>
+							<ul class="actions">
+								<li><a href="#two" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<a href="#" class="image"><img src="/static/images/f1.png" alt="" data-position="top center" /></a>
+					<div class="content">
+						<div class="inner">
+							<h2>With height</h2>
+							<p>Find how long will you take to ride rides, and whether you can ride it or not.</p>
+							<ul class="actions">
+								<li><a href="#two" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+			<!-- Two -->
+			<section id="two" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Select favorite atraction</h2>
+					<div class="features">
+						<canvas id="everland" width="1300" height="800"></canvas>
+						<section id="zoo">
+							<span class="icon major fa-chain"></span>
+							<h3>주토피아</h3>
+							<form id="zoochecked">
+								<%for(var i=0; i < Vertex.length; i++){
+									if(Vertex[i].zone=="zoo"&&talls[i]==1){%>
+										<input type="checkbox" class="check" name="zoo" value="<%=Vertex[i].name%>"/><%=Vertex[i].name%><br>
+									<%}
+								}%>
+							</form>
+						</section>
+						<section id="magic">
+							<span class="icon major fa-chain"></span>
+							<h3>매직랜드</h3>
+							<form id="magicchecked">
+								<%for(var i=0; i < Vertex.length; i++){
+									if(Vertex[i].zone=="magic"&&talls[i]==1){%>
+										<input type="checkbox" class="check" name="magic" value="<%=Vertex[i].name%>"/><%=Vertex[i].name%><br>
+									<%}
+								}%>
+							</form>
+						</section>
+						<section id="american">
+							<span class="icon major fa-chain"></span>
+							<h3>아메리칸어드벤처</h3>
+							<form id="amechecked">
+								<%for(var i=0; i < Vertex.length; i++){
+									if(Vertex[i].zone=="american"&&talls[i]==1){%>
+										<input type="checkbox" class="check" name="american" value="<%=Vertex[i].name%>"/><%=Vertex[i].name%><br>
+									<%}
+								}%>
+							</form>
+						</section>
+						<section id="european">
+							<span class="icon major fa-chain"></span>
+							<h3>유러피언어드벤처</h3>
+							<form id="eurochecked">
+								<%for(var i=0; i < Vertex.length; i++){
+									if(Vertex[i].zone=="european"&&talls[i]==1){%>
+										<input type="checkbox" class="check" name="european" value="<%=Vertex[i].name%>"/><%=Vertex[i].name%><br>
+									<%}
+								}%>
+							</form>
+						</section>
+						<div style="margin:auto;">
+							<form id="hchecked">
+								Height: <select id="height" name="height">
+									<option value="150">Over 150</option>
+									<option value="140">140~149</option>
+									<option value="130">130~139</option>
+									<option value="120">120~129</option>
+									<option value="110">110~119</option>
+									<option value="100">100~109</option>
+									<option value="90">90~99</option>
+									<option value="80">80~89</option>
+									<option value="70">Under 80</option>
+								</select>
+								<button type="button" name="button" onclick="submitItem();">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Three -->
+			<section id="three" class="wrapper style1 fade-up">
+				<div class="inner">
+					<h2>Get in touch</h2>
+					<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+					<div class="split style1">
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+		<!-- Scripts -->
+		<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="/static/javascripts/jquery.min.js"></script>
+		<script src="/static/javascripts/jquery.scrollex.min.js"></script>
+		<script src="/static/javascripts/jquery.scrolly.min.js"></script>
+		<script src="/static/javascripts/browser.min.js"></script>
+		<script src="/static/javascripts/breakpoints.min.js"></script>
+		<script src="/static/javascripts/util.js"></script>
+		<script src="/static/javascripts/main.js"></script>
+		<!--line node script-->
+		<script>
+			let itemlist=[];
+			var canvas=document.getElementById("everland");
+			var ctx=canvas.getContext("2d");
+			ctx.textAlign = "center";
+			ctx.textBaseline = "middle";
+			ctx.font="15px Courier";
+			ctx.lineWidth = 1;
+			ctx.fillStyle="#fff2fb";
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			ctx.fillStyle="black";
+			<%if(time!=-1){%>
+				ctx.font="30px Courier";
+				ctx.fillText("total time: <%=parseInt(time/60)%>hours <%=time%60%>minutes", 650, 775);
+				ctx.font="15px Courier";
+			<%}%>
+			var Line=function(x,y,a,b){
+				this.x=x;
+				this.y=y;
+				this.a=a;
+				this.b=b;
+			}
+			Line.prototype.draw=function(color){
+				ctx.fillStyle=color;
+				ctx.beginPath();
+				ctx.moveTo(this.x+80,this.y);
+				ctx.lineTo(this.a+80,this.b);
+				ctx.stroke();
+			}
+			var circle=function(x,y,txt){
+				ctx.beginPath();
+				ctx.arc(x+80,y,7,0,Math.PI*2, true);
+				ctx.stroke();
+				ctx.fillText(txt, x+80, y+20);
+			};
+			var Node = function(x, y, name){
+				this.x=x;
+				this.y=y;
+				this.name=name;
+				this.color="Black";
+			}
+			Node.prototype.draw = function(size,color) {
+				ctx.lineWidth = size;
+				ctx.strokeStyle = color;
+				ctx.fillStyle = color;
+				circle(this.x, this.y, this.name);
+			}
+			var nodes = [];
+			<%for(var i=0;i<Vertex.length;i++){%>
+				nodes.push(new Node(<%=Vertex[i].x%>, <%=Vertex[i].y%>, '<%=Vertex[i].name%>'));
+			<%}%>
+			var lines=[];
+			<%for(var i=0;i<Edge.length;i++){%>
+				lines.push(new Line(<%=Vertex[Edge[i].index1].x%>,<%=Vertex[Edge[i].index1].y%>,<%=Vertex[Edge[i].index2].x%>,<%=Vertex[Edge[i].index2].y%>));
+			<%}%>
+			<%for(var i=0 ; i<Vertex.length ; i++){%>
+				<%if(talls[i]==1){%>
+					nodes[<%=i%>].draw(2,"Black");
+				<%}else{%>
+					nodes[<%=i%>].draw(2,"White");
+				<%}%>
+			<%}%>
+			for(var i=0 ; i<lines.length ; i++){
+				lines[i].draw("Black");
+			}
+			<%for(var i=0;i<route.length-1;i++){
+				if(talls[route[i]]==1){%>
+					nodes[<%=route[i]%>].draw(2,"White");
+					nodes[<%=route[i]%>].draw(2,"Green");
+				<%}%>
+				nodes[<%=route[i]%>].color="Green";
+				for(var j=0;j<lines.length;j++){
+					if(((lines[j].x==nodes[<%=route[i]%>].x&&lines[j].y==nodes[<%=route[i]%>].y)&&(lines[j].a==nodes[<%=route[i+1]%>].x&&lines[j].b==nodes[<%=route[i+1]%>].y))
+					||((lines[j].x==nodes[<%=route[i+1]%>].x&&lines[j].y==nodes[<%=route[i+1]%>].y)&&(lines[j].a==nodes[<%=route[i]%>].x&&lines[j].b==nodes[<%=route[i]%>].y))){
+						lines[j].draw("White");
+						lines[j].draw("Green");
+					}
+				}
+			<%}
+			if(route.length!=0){%>
+				nodes[<%=route[route.length-1]%>].draw(2,"White");
+				nodes[<%=route[route.length-1]%>].draw(2,"Green");
+			<%}%>
+			$(document).ready(function(){
+			  $('option').each(function(){
+			    if($(this).val()=="<%=tall%>"){
+			      $(this).attr("selected","selected");
+			    }
+			  });
+			});
+			$(document).on("change",".check",function(){
+				var name=$(this).val();
+				var count=0;
+				for(count;count<nodes.length;count++){
+					if(nodes[count].name==name){
+						break;
+					}
+				}
+				nodes[count].draw(2,"White");
+        if($(this).is(":checked")){
+					nodes[count].draw(2,"Red");
+					itemlist.push(count);
+        }else{
+					nodes[count].draw(2,nodes[count].color);
+					var index=itemlist.indexOf(count);
+					if(index>-1){
+						itemlist.splice(index,1);
+					}
+        }
+      });
+			function makeInput(name,value) {
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", name);
+        hiddenField.setAttribute("value", value);
+        return hiddenField;
+      }
+			$(function(){
+				$("#height").on("change",function(){
+					var tall=$(this).val();
+					var form = document.createElement("form");
+					form.setAttribute("charset", "UTF-8");
+					form.setAttribute("method", "Get");
+					form.setAttribute("action", "/");
+					form.appendChild(makeInput("tall",tall));
+					document.body.appendChild(form);
+					form.submit();
+	      });
+			});
+			function submitItem() {
+        var tall = $("#height option:selected").val();
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "Post");
+        form.setAttribute("action", "/");
+        form.appendChild(makeInput("route",itemlist));
+				form.appendChild(makeInput("tall",tall));
+        document.body.appendChild(form);
+        form.submit();
+      };
+		</script>
+	</body>
+</html>

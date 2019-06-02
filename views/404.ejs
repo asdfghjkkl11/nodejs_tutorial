@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ERROR!</title>
+  <!-- css lines -->
+  <style>
+    #frame{
+      width: 400px;
+      height: 300px;
+      margin: 0 auto;
+      margin-top: 15%;
+      padding-left: 90px;
+      background-color: rgba(0,0,0,0.6);
+    }
+    @import url("https://fonts.googleapis.com/css?family=Merriweather");
+    body {
+      height: 500px;
+      background-image: url('/static/images/cat.png');
+      background-repeat: no-repeat;
+      background-size: 720px 480px;
+      background-position: center;
+      color: #f2f2f2;
+      background-color: #0D324D;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 10px 15px;
+      font-size: 15px;
+      cursor: pointer;
+      position: relative;
+      border: 2px solid white;
+      outline: none;
+      color: white;
+      background-color: transparent;
+      margin: 20px;
+      font-family: 'Merriweather', serif;
+      white-space: nowrap;
+    }
+    .btn--border::after, .btn--border::before,
+    .btn--border span::after,
+    .btn--border span::before {
+      content: "";
+      position: absolute;
+      background-color: white;
+      transition: 0.5s ease;
+    }
+    .btn--border::after, .btn--border::before {
+      height: 100%;
+      width: 2px;
+      top: -2px;
+    }
+    .btn--border::after {
+      left: -2px;
+    }
+    .btn--border::before {
+      right: -2px;
+    }
+    .btn--border span::after,
+    .btn--border span::before {
+      height: 2px;
+      width: 100%;
+      left: -2px;
+    }
+    .btn--border span::after {
+      top: -2px;
+    }
+    .btn--border span::before {
+      bottom: -2px;
+    }
+    .btn--border:hover:after {
+      transform: translatex(-12px);
+    }
+    .btn--border:hover:before {
+      transform: translatex(12px);
+    }
+    .btn--border:hover span::after {
+      transform: translatey(-12px);
+    }
+    .btn--border:hover span::before {
+      transform: translatey(12px);
+    }
+    .btn--swap span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10px 15px;
+      font-size: 15px;
+      box-sizing: border-box;
+      opacity: 0;
+      color: black;
+      transition: 0.35s ease;
+    }
+    .btn--swap::before {
+      content: "";
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background-color: white;
+      transition: 0.5s ease;
+    }
+    .btn--swap:hover:before {
+      width: 100%;
+    }
+    .btn--swap:hover span {
+      opacity: 1;
+    }
+    .btn--future::after, .btn--future::before {
+      content: "";
+      position: absolute;
+      border: 2px solid white;
+      width: calc(100% + 15px);
+      height: 40px;
+      transition: 0.5s ease;
+    }
+    .btn--future::after {
+      top: -15px;
+      left: -15px;
+      border-right: none;
+      border-bottom: none;
+    }
+    .btn--future::before {
+      bottom: -15px;
+      right: -15px;
+      border-left: none;
+      border-top: none;
+    }
+    .btn--future:hover:after, .btn--future:hover:before {
+      width: calc(100% - 30px);
+      height: 60px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+  <!-- login form -->
+  <!-- user_id, user_pwd -->
+  <!-- log in(submit), cancel(back) button -->
+  <div id="frame">
+    <form action="/" method="post">
+      <table>
+        <tr>
+          <td><p align="center" style="font-size:47px">404 not found</p></td>
+        </tr>
+        <tr>
+          <td><button type="button" class="btn btn--border" onclick = "history.back(-1);">돌아가기<span></span></button></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
