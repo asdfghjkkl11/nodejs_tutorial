@@ -1,6 +1,6 @@
 # nodejs_tutorial
 sample node.js example about MST, DFS, Floyd-Warshall
-![img0](https://github.com/asdfghjkkl11/TODO_trivia/blob/master/public/images/trivia.PNG)
+![img0](https://github.com/asdfghjkkl11/nodejs_tutorial/blob/master/public/images/f1.png)
 ## Initial setting (if not installed).
   ```
   sudo apt-get install git-core
