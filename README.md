@@ -1,6 +1,5 @@
 # nodejs_tutorial
 sample node.js example about MST, DFS, Floyd-Warshall
-# TODO_trivia
 ![img0](https://github.com/asdfghjkkl11/TODO_trivia/blob/master/public/images/trivia.PNG)
 ## Initial setting (if not installed).
   ```
