@@ -36,6 +36,6 @@ sample node.js example about MST, DFS, Floyd-Warshall
   ```
 you can experience at 
 
-[aws EC2](http://52.79.228.147:3000/)
+[aws EC2](https://github.com/asdfghjkkl11/nodejs_tutorial)(closed)
 
 [git](https://github.com/asdfghjkkl11/nodejs_tutorial.git)
