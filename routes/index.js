@@ -58,7 +58,8 @@ router.post('/', function(req, res, next) {
       point=min;
     }
     for(var i=0;i<result.length-1;i++){
-      time+=Vertex[result[i]].wating;
+      if(Vertex[result[i]].tall==0||Vertex[result[i]].tall>=tall)
+        time+=Vertex[result[i]].wating;
       time+=FW.Fmap[result[i]][result[i+1]];
     }
     time+=Vertex[result[result.length-1]].wating;
@@ -83,7 +84,8 @@ router.post('/', function(req, res, next) {
       point=min;
     }
     for(var i=0;i<result.length-1;i++){
-      time+=Vertex[result[i]].waiting;
+      if(Vertex[result[i]].tall==0||Vertex[result[i]].tall>=tall)
+        time+=Vertex[result[i]].waiting;
       time+=FW.Fmap[result[i]][result[i+1]];
     }
     time+=Vertex[result[result.length-1]].waiting;
