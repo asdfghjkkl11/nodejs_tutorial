@@ -16,7 +16,7 @@
     "fs": "0.0.1-security",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
     "querystringify": "^2.1.1",
